@@ -60,15 +60,29 @@
       text-align: justify;
       font-size:11px;
       .heng{
-        background:url(../images/heng.png) no-repeat;
-        background-size: 20px;
-        background-position: center 15px;
         cursor: pointer;
         width: 44px;
+        overflow: hidden;
         -webkit-tap-highlight-color:rgba(0,0,0,0);
-      }
-      div{
         display: inline-block;
+        height: 30px;
+        .xian{
+          width: 15px;
+          height:1px;
+          background: #fff;
+          margin-top: 20px;
+          margin-left: 10px ;
+          transition: all .5s;
+        }
+        .xian1{
+              width:15px;
+              height:1px;
+              background: #fff;
+              margin-top: 4px;
+              margin-left: 10px;
+              transition: all .5s;
+          }
+
       }
       .logo{
         background:url(../images/logo.png) no-repeat;
@@ -76,13 +90,15 @@
         background-position: center 10px;
         cursor: pointer;
         width: 44px;
+        display: inline-block;
       }
       .shop{
         background:url(../images/shop.png) no-repeat;
         background-size: 20px;
-        background-position: center 14px;
+        background-position: center 10px;
         cursor: pointer;
         width: 44px;
+        display: inline-block;
       }
       &:after{
         display: inline-block;
@@ -111,7 +127,25 @@
         display: none;
       }
     }
+
   }
+    //左边小箭头的动画
+    .active .xian{
+        animation: an 0.5s linear forwards;
+    }
+    .active .xian1{
+        animation: an1 0.5s linear forwards;
+    }
+    @keyframes an {
+        100%{
+            transform: rotate(45deg) translateY(4px);
+        }
+    }
+    @keyframes an1 {
+        100%{
+            transform: rotate(-45deg) translateY(-3px);
+        }
+    }
   @media screen and (min-width:768px) {
     .max-box{
       display: block!important;

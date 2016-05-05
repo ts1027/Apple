@@ -10,17 +10,18 @@ $(function(){
         if(flag){
             bg.css("background","#000");
             max.animate({height:height},400);
+            btn.addClass("active");
             shop.animate({backgroundPosition:50},300);
             flag=false;
         }else{
             flag=true;
             shop.animate({backgroundPosition:14},300);
+            btn.removeClass("active");
             max.animate({height:0},400,function(){
                 bg.css("background","rgba(0,0,0,0.8)");
             });
         }
     });
-
 
     //lunbo
     var box=$(".banner-box"); //大盒子
